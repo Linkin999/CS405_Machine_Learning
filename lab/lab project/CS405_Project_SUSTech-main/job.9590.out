@@ -1,0 +1,29 @@
+No devices were found
+Dataset CityscapesDataset
+    Number of images: 2975
+    Split: train
+    Mode: gtFine
+    Augment: True
+    Root Location: ../datasets/cityscapes
+
+35
+creating unet model...
+Traceback (most recent call last):
+  File "script_train.py", line 36, in <module>
+    generator = nn.DataParallel(UnetGenerator(3, img_data.num_classes, 64), device_ids=[i for i in range(args.num_gpu)]).cuda()
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 918, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 918, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/envs/pytorch-1.6.0/lib/python3.8/site-packages/torch/cuda/__init__.py", line 298, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available

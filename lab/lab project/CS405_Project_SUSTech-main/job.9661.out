@@ -1,0 +1,52 @@
+Tue Dec 26 16:57:44 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.104.05             Driver Version: 535.104.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA TITAN RTX               On  | 00000000:0B:00.0 Off |                  N/A |
+| 41%   29C    P8              17W / 280W |      4MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda20CUDACachingAllocator9allocatorE'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+Traceback (most recent call last):
+  File "/home/wangdx_lab/cse12011923/pytorch-cifar/pytorch_unet/script_train.py", line 5, in <module>
+    from model_unet import *
+  File "/home/wangdx_lab/cse12011923/pytorch-cifar/pytorch_unet/model_unet.py", line 1, in <module>
+    from model_blocks import *
+  File "/home/wangdx_lab/cse12011923/pytorch-cifar/pytorch_unet/model_blocks.py", line 6, in <module>
+    import torchvision.utils as v_utils
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/__init__.py", line 6, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/models/__init__.py", line 2, in <module>
+    from .convnext import *
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/models/convnext.py", line 8, in <module>
+    from ..ops.misc import Conv2dNormActivation, Permute
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/ops/__init__.py", line 23, in <module>
+    from .poolers import MultiScaleRoIAlign
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/ops/poolers.py", line 10, in <module>
+    from .roi_align import roi_align
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torchvision/ops/roi_align.py", line 4, in <module>
+    import torch._dynamo
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torch/_dynamo/__init__.py", line 2, in <module>
+    from . import allowed_functions, convert_frame, eval_frame, resume_execution
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torch/_dynamo/allowed_functions.py", line 23, in <module>
+    import torch._functorch.deprecated as deprecated_func
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torch/_functorch/deprecated.py", line 1, in <module>
+    import torch._functorch.apis as apis
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torch/_functorch/apis.py", line 9, in <module>
+    from torch._functorch.utils import exposed_in, argnums_t
+  File "/home/wangdx_lab/cse12011923/software/miniconda3/lib/python3.11/site-packages/torch/_functorch/utils.py", line 3, in <module>
+    from torch._C._functorch import (
+ImportError: cannot import name 'set_single_level_autograd_function_allowed' from 'torch._C._functorch' (unknown location)
